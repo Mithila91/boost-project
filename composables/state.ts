@@ -3,6 +3,8 @@ interface Product {
   name: string
   description: string
   image: string
+  vegeterain: boolean
+  allergies: string[]
 }
 
 interface CartProduct extends Product {
