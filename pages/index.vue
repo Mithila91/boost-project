@@ -23,7 +23,7 @@ const allergies = [...new Set(allAllergies)];
 <template>
     <main>
         <div class="flex flex-col items-center justify-center">
-            <h1 class="my-10 text-3xl font-bold">Adopt a doggo</h1>
+            <h1 class="my-10 text-3xl font-bold">adopt a doggo</h1>
             <div class="flex flex-row gap-5">
                 <div v-for="allergy in allergies" :key="allergy"  class="flex flex-row">
                     <p class="mr-4">{{allergy}}:</p>
