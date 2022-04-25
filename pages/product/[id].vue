@@ -2,6 +2,9 @@
 const route = useRoute()
 
 const { data: product } = await useFetch(`/api/product/${route.params.id}`)
+definePageMeta({
+  middleware: ["logger", "auth"]
+})
 </script>
 
 <template>
