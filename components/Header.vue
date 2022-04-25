@@ -1,5 +1,13 @@
 <script setup>
 const { cart } = useCart()
+
+const cartCount = computed(() => {
+  let count = 0
+
+  cart.value.forEach((cartProduct) => (count += cartProduct.quantity))
+
+  return count
+})
 </script>
 
 <template>
@@ -22,7 +30,7 @@ const { cart } = useCart()
           />
         </svg>
       </NuxtLink>
-      :{{ cart.length }}
+      :{{ cartCount }}
     </span>
   </header>
 </template>

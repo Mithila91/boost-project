@@ -10,7 +10,7 @@ interface CartProduct extends Product {
 }
 
 export const useCart = () => {
-  const cart = useState<CartProduct[]>('', () => [])
+  const cart = useState<CartProduct[]>('hello', () => [])
 
   const addToCart = (product: Product) => {
     const currentProduct = cart.value.find((p) => p.id === product.id)
