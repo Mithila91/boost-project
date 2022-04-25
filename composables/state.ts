@@ -1,34 +1,32 @@
 interface Product {
-  id: number
-  name: string
-  description: string
-  image: string
-  vegeterain: boolean
-  allergies: string[]
+	id: number;
+	name: string;
+	description: string;
+	image: string;
+	vegetarian: boolean;
+	allergies: string[];
 }
 
 interface CartProduct extends Product {
-  quantity: number
+	quantity: number;
 }
 
 export const useCart = () => {
-  const cart = useState<CartProduct[]>('hello', () => [])
+	const cart = useState<CartProduct[]>('', () => []);
 
-  const addToCart = (product: Product) => {
-    const currentProduct = cart.value.find((p) => p.id === product.id)
-    if (currentProduct) {
-      currentProduct.quantity += 1
-      // const newCart = cart.value.filter((p) => p.id !== product.id)
-      // currentProduct.quantity = +1
-      // newCart.push(currentProduct)
-    } else {
-      const cartProduct: CartProduct = { ...product, quantity: 1 }
-      cart.value.push(cartProduct)
-    }
-  }
+	const addToCart = (product) => {
+		const currentProduct = cart.value.find((p) => p.id === product.id);
 
-  return {
-    cart: readonly(cart),
-    addToCart,
-  }
-}
+		if (currentProduct) {
+			currentProduct.quantity += 1;
+		} else {
+			const cartProduct: CartProduct = { ...product, quantity: 1 };
+			cart.value.push(cartProduct);
+		}
+	};
+
+	return {
+		cart: readonly(cart),
+		addToCart
+	};
+};

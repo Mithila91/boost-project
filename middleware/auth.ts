@@ -1,6 +1,13 @@
 export default defineNuxtRouteMiddleware((to, from) => {
-	const isAuthenticated = false;
+	const isAuthenticated = true;
+
+	const hasSecretAccess = to.query.key === '123';
+
+	if (hasSecretAccess) {
+		return;
+	}
+
 	if (!isAuthenticated) {
-		return abortNavigation('not allowed');
+		return abortNavigation('NOT ALLOWED');
 	}
 });

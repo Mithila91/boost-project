@@ -1,11 +1,17 @@
 <script setup>
-const { cart } = useCart()
-
-//console.log(cart.value)
+const { cart } = useCart();
 </script>
+
 <template>
-  <div v-if="!cart.length"><p>Product not shown</p></div>
-  <div v-for="product in cart" :key="index">
-    <p>{{ product.name }}{{ product.description }} {{ product.quantity }}</p>
-  </div>
+    <div class="min-h-screen">
+        <div v-if="!cart.length">
+            <p class="text-5xl font-bold">cart is empty</p>
+        </div>
+        <div v-else v-for="(product, index) in cart" :product="product" :key="index">
+            <div class="flex flex-row">
+                <img :src="product.image" width="100" height="100" :alt="product.name" class="object-cover h-10 mb-3" loading="lazy">
+                <p>{{product.name}} {{product.quantity}}</p>
+            </div>
+        </div>
+    </div>
 </template>
