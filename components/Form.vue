@@ -1,5 +1,7 @@
 <script setup>
 const formData = ref({})
+
+const {$listify} = useNuxtApp()
 const emit = defineEmits(['added'])
 
 const handleSubmit = async () => {
@@ -7,7 +9,7 @@ const handleSubmit = async () => {
 
   let allergyList
   if (allergies) {
-    allergyList = allergies.split(',').map((a) => a.trim())
+    allergyList = $listify(allergies)
   }
 
   const productData = {

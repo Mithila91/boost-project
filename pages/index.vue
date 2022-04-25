@@ -5,6 +5,11 @@ useHead({
   title: 'Title',
   meta: [{ name: 'Name', content: 'My content' }],
 })
+
+definePageMeta({
+  middleware: "logger"
+})
+
 </script>
 
 <template>
