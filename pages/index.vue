@@ -30,7 +30,7 @@ const allergies = [...new Set(allAllergies)];
                     <Toggle v-model="filter[allergy.toLowerCase()]"/>
                 </div>
                 <span class="inline">
-                Vegetariskt: <Toggle v-model="filter.vegetarian" class="pl-3"/>
+                vegetariskt: <Toggle v-model="filter.vegetarian" class="pl-3"/>
                 </span>
             </div>
         </div>
@@ -39,7 +39,7 @@ const allergies = [...new Set(allAllergies)];
         </div>
 
         <div class="flex justify-center ">
-        <Form @update-products="refresh" /></div>
+        <Form @updateProducts="refresh" /></div>
     </main>
 </template>
 

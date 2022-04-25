@@ -1,1 +1,26 @@
-[{"id":"1618","name":"australian shepard","description":"vall hund","image":"https://images.unsplash.com/photo-1601979031925-424e53b6caaa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHVwcHl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60","vegetarian":true,"allergies":["fish","chimken"]}]
+[
+	{
+		"id": "1618",
+		"name": "australian shepard",
+		"description": "vall hund",
+		"image": "https://images.unsplash.com/photo-1601979031925-424e53b6caaa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHVwcHl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+		"vegetarian": true,
+		"allergies": [ "fish", "chimken" ]
+	},
+	{
+		"id": "2572",
+		"name": "Staffie",
+		"description": "muskelhund",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Staffie.jpg/800px-Staffie.jpg",
+		"vegetarian": false,
+		"allergies": [ "chimken" ]
+	},
+	{
+		"id": "2384",
+		"name": "not a dog",
+		"description": "thinks the world is his and all of us are peasants",
+		"image": "https://books-teneues.com/wp-content/uploads/2019/10/9783961712199_2.jpg",
+		"vegetarian": false,
+		"allergies": []
+	}
+]
