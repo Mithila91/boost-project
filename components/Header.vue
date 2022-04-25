@@ -5,9 +5,9 @@ const cartCount = computed(() => cart.value.reduce((total, cartProduct) => total
 
 <template>
     <header>
-        <div class="flex items-center justify-between h-20 px-20 text-white bg-orange-300">
+        <div class="flex items-center justify-between h-20 px-20 text-white bg-purple-300">
             <NuxtLink to="/">
-            <span class="text-5xl">LOGO</span>
+            <span class="text-4xl">LOGO</span>
             </NuxtLink>
             <NuxtLink to="/cart">
                 <div class="flex">

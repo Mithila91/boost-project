@@ -38,7 +38,8 @@ const allergies = [...new Set(allAllergies)];
             <Card v-for="(product, index) in productsToShow" :product="product" :key="index" @deleteProduct="refresh"/>
         </div>
 
-        <Form @update-products="refresh" />
+        <div class="flex justify-center ">
+        <Form @update-products="refresh" /></div>
     </main>
 </template>
 
